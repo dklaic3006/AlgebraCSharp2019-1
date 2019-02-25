@@ -4,24 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-<<<<<<< HEAD
-    <ProjectGuid>{04799DD3-720C-4707-947F-C35FEB76F557}</ProjectGuid>
+    <ProjectGuid>{F7979955-B965-4E9D-80D6-7FCA99FBA043}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>zbroj_razlika</RootNamespace>
-    <AssemblyName>zbroj_razlika</AssemblyName>
+    <RootNamespace>ConsoleApp5</RootNamespace>
+    <AssemblyName>ConsoleApp5</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-=======
-    <ProjectGuid>{8649C9D1-2FED-4CF4-A838-A3896F540168}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>zbroj_razlika</RootNamespace>
-    <AssemblyName>zbroj_razlika</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
->>>>>>> 1da993fe071f4c181c38fb24ab36f7100880cd69
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,10 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-<<<<<<< HEAD
-    <None Include="ClassDiagram1.cd" />
-=======
->>>>>>> 1da993fe071f4c181c38fb24ab36f7100880cd69
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("zbroj_razlika")]
+[assembly: AssemblyTitle("ConsoleApp6")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("zbroj_razlika")]
+[assembly: AssemblyProduct("ConsoleApp6")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,11 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-<<<<<<< HEAD
-[assembly: Guid("04799dd3-720c-4707-947f-c35feb76f557")]
-=======
-[assembly: Guid("8649c9d1-2fed-4cf4-a838-a3896f540168")]
->>>>>>> 1da993fe071f4c181c38fb24ab36f7100880cd69
+[assembly: Guid("ffa3e48e-88ab-4c6d-ad62-182cc77a72c4")]
 
 // Version information for an assembly consists of the following four values:
 //

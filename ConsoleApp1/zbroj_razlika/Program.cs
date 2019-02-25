@@ -8,6 +8,7 @@ namespace zbroj_razlika
 {
     class Program
     {
+<<<<<<< HEAD
         
         static void Main(string[] args)
         {
@@ -32,6 +33,27 @@ namespace zbroj_razlika
 
             
 
+=======
+        static void Main(string[] args)
+        {
+            int a = 0, b = 0;
+
+            Console.Write("Unesi 1. broj: ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Unesi 2. broj: ");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            Console.WriteLine("Zbroj je: {0}", a + b);
+            Console.WriteLine("Razlika je: {0}", a - b);
+            Console.WriteLine();
+
+            Console.WriteLine("Umnožak je: {0}", a * b);
+            Console.WriteLine("Kvocjent je: {0}", (decimal)a / (decimal)b);
+            Console.WriteLine();
+
+            Console.WriteLine("Pritisni Enter za kraj...");
+>>>>>>> 1da993fe071f4c181c38fb24ab36f7100880cd69
             Console.ReadLine();
         }
     }
