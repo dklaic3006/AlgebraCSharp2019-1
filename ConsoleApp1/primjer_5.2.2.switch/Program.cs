@@ -59,7 +59,7 @@ namespace primjer_5._2._2
                             //DivideByZeroException
                             Console.WriteLine("Kvocijent je {0} / {1} = {2}", a, b, SafeDivision(a, b));
                         }
-                    catch(DivideByZeroException dbzex)
+                    catch(DivideByZeroException)
                     {
                         Console.WriteLine("Ne možemo djelito s nulom. drugi parametar je 0. ");
                     }
