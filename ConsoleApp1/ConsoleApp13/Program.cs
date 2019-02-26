@@ -10,11 +10,13 @@ namespace zadatak_5._2._7_dobar_broj
     {
         static void Main(string[] args)
         {
+
+            int broj = 0;
+            Console.Write("Unesite jedan broj: ");
+
             try
-            {
-                //int broj = 0;
-                Console.Write("Unesite jedan broj: ");
-                int broj = int.Parse(Console.ReadLine());
+            {                
+                broj = int.Parse(Console.ReadLine());
 
                 if (broj % 4 == 0 && broj > 100)
                 {
@@ -30,11 +32,11 @@ namespace zadatak_5._2._7_dobar_broj
 
             }
 
-            catch (Exception ex)
+            catch (FormatException e)
 
             {
                 Console.WriteLine("dogodila se greška");
-                Console.WriteLine("Opis greške:" + ex.Message);
+                Console.WriteLine("Opis greške:" + e.ToString());
             }
             finally
             {
