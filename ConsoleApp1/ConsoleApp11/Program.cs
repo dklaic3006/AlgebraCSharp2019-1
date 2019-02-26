@@ -10,19 +10,19 @@ namespace zadatak_5._2._5_u_intervalu
     {
         static void Main(string[] args)
         {
-            float broj = 0;
+            //int broj = 0;
             Console.Write("Unesite jedan broj: ");
-            broj = int.Parse(Console.ReadLine());
+            int broj = int.Parse(Console.ReadLine());
 
-            if (broj > 100 && broj < 200)
+            if (broj >= 100 && broj <= 200)
             {
-                Console.WriteLine(" Unešeni broj je u intervalu 100 do 200");
+                Console.WriteLine("\nUnešeni broj je u intervalu 100 do 200");
             }
 
            
             else
             {
-                Console.WriteLine(" Unešeni broj nije u intervalu 100 do 200");
+                Console.WriteLine("\nUnešeni broj nije u intervalu 100 do 200");
             }
 
             Console.WriteLine("\n\tZa kraj pritisnite ENTER!");

@@ -10,9 +10,9 @@ namespace zadatak_5._2._8_prijestupna_godina
     {
         static void Main(string[] args)
         {
-            uint godina = godina = 0;
+            //uint godina = godina = 0;
             Console.Write("unesite godinu: ");
-            godina = uint.Parse(Console.ReadLine());
+            uint godina = uint.Parse(Console.ReadLine());
 
             if (godina % 4 == 0 && (godina % 100 != 0 || godina % 400 == 0))
 
