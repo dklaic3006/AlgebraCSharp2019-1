@@ -15,16 +15,26 @@ namespace zadatak_5._3._4_faktorijel
 
             {
                 Console.Write("Unesite cijeli broj: ");
-                x = int.Parse(Console.ReadLine());
 
-                for (int i = 1; i <= x; i++)
+                try
                 {
-                    faktorijel *= i;
-                    }
-                        Console.WriteLine("\n\n{0}! = {1}", x, faktorijel);                                       
-                    }
 
 
+                    x = int.Parse(Console.ReadLine());
+
+                    for (int i = 1; i <= x; i++)
+                    {
+                        faktorijel *= i;
+                    }
+                    Console.WriteLine("\n\n{0}! = {1}", x, faktorijel);
+                }
+
+                catch (Exception ex)
+
+                {
+                    Console.WriteLine(ex.ToString());
+                }
+            }
             
             Console.WriteLine("\n\nza kraj stisni nešto");
 
