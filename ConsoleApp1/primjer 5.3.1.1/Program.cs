@@ -12,7 +12,7 @@ namespace primjer_5._3._1._1
         {
             for (int i = 0; i < 10; i++)
             {
-                Console.Write("Algebra ");
+                Console.Write("{0 } \tAlgebra \n", 1+i);
             }
 
             Console.ReadKey();
