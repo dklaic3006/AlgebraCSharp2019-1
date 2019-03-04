@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace zadatak_5._3._13
+namespace zadatak_5._3._13_min_i_max
 {
     class Program
     {
