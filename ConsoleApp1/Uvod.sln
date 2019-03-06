@@ -145,7 +145,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.1 Krug", "Zadat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.2. jdnakokracan trokut", "Zadatak 7.2.2. jdnakokracan trokut\Zadatak 7.2.2. jdnakokracan trokut.csproj", "{33AC0CCE-DFD3-414D-8BD8-86926C866648}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.3. Celzij u Fahrenheit", "Zadatak 7.2.3. Celzij u Fahrenheit\Zadatak 7.2.3. Celzij u Fahrenheit.csproj", "{374208FA-9935-4A9B-BD9F-EE9BC31B8869}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.4 Celzij u Fahrenheit", "Zadatak 7.2.3. Celzij u Fahrenheit\Zadatak 7.2.4 Celzij u Fahrenheit.csproj", "{374208FA-9935-4A9B-BD9F-EE9BC31B8869}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.3 KS u KW", "Zadatak 7.2.3 KS u KW\Zadatak 7.2.3 KS u KW.csproj", "{09FA5EC0-6EE5-480F-8302-29CB23C477E2}"
 EndProject
@@ -154,6 +154,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.8 Faktorijel", "Zadatak 7.2.8 Faktorijel\Zadatak 7.2.8 Faktorijel.csproj", "{8A30A269-F440-43B4-973B-43FDF1DCBA22}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zbirka 7.2.9 Prosjek", "Zbirka 7.2.9 Prosjek\Zbirka 7.2.9 Prosjek.csproj", "{76A77F40-B976-412F-ABCC-C0439BA1AA46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.6 Prosti broj", "Zadatak 7.2.6 Prosti broj\Zadatak 7.2.6 Prosti broj.csproj", "{CCB8EBA5-448D-4A22-932A-821FB3B5A9C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.7 Prosti Broj Ponovno", "Zadatak 7.2.7 Prosti Broj Ponovno\Zadatak 7.2.7 Prosti Broj Ponovno.csproj", "{F5BC2EEA-058D-48C6-ABCA-AC03329667CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.10 Ukupna Cijena", "Zadatak 7.2.10 Ukupna Cijena\Zadatak 7.2.10 Ukupna Cijena.csproj", "{7118A29B-50BA-4CB2-9988-7E4D0555A250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadatak 7.2.11 Pari i Neparni", "Zadatak 7.2.11 Pari i Neparni\Zadatak 7.2.11 Pari i Neparni.csproj", "{6D6CB5A0-A615-4FA5-B703-C3BA7A94D915}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -413,6 +421,22 @@ Global
 		{76A77F40-B976-412F-ABCC-C0439BA1AA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76A77F40-B976-412F-ABCC-C0439BA1AA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76A77F40-B976-412F-ABCC-C0439BA1AA46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCB8EBA5-448D-4A22-932A-821FB3B5A9C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB8EBA5-448D-4A22-932A-821FB3B5A9C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB8EBA5-448D-4A22-932A-821FB3B5A9C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB8EBA5-448D-4A22-932A-821FB3B5A9C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BC2EEA-058D-48C6-ABCA-AC03329667CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BC2EEA-058D-48C6-ABCA-AC03329667CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BC2EEA-058D-48C6-ABCA-AC03329667CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BC2EEA-058D-48C6-ABCA-AC03329667CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7118A29B-50BA-4CB2-9988-7E4D0555A250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7118A29B-50BA-4CB2-9988-7E4D0555A250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7118A29B-50BA-4CB2-9988-7E4D0555A250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7118A29B-50BA-4CB2-9988-7E4D0555A250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D6CB5A0-A615-4FA5-B703-C3BA7A94D915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D6CB5A0-A615-4FA5-B703-C3BA7A94D915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D6CB5A0-A615-4FA5-B703-C3BA7A94D915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D6CB5A0-A615-4FA5-B703-C3BA7A94D915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -485,6 +509,10 @@ Global
 		{1455EA9C-625E-453B-9E1A-1F4D35CA4500} = {E773BAFA-7915-42E5-8BCF-3F2F90347FC2}
 		{8A30A269-F440-43B4-973B-43FDF1DCBA22} = {E773BAFA-7915-42E5-8BCF-3F2F90347FC2}
 		{76A77F40-B976-412F-ABCC-C0439BA1AA46} = {E773BAFA-7915-42E5-8BCF-3F2F90347FC2}
+		{CCB8EBA5-448D-4A22-932A-821FB3B5A9C9} = {E773BAFA-7915-42E5-8BCF-3F2F90347FC2}
+		{F5BC2EEA-058D-48C6-ABCA-AC03329667CC} = {E773BAFA-7915-42E5-8BCF-3F2F90347FC2}
+		{7118A29B-50BA-4CB2-9988-7E4D0555A250} = {E773BAFA-7915-42E5-8BCF-3F2F90347FC2}
+		{6D6CB5A0-A615-4FA5-B703-C3BA7A94D915} = {E773BAFA-7915-42E5-8BCF-3F2F90347FC2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {93C94912-EA66-4042-8553-555F37B57408}
