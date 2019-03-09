@@ -8,11 +8,13 @@ namespace _1_ucenik
 {
     class Program
     {
+        private static object racun;
+
         //public static int racun { get; private set; }
 
         static void Main(string[] args)
         {
-            Ucenik ucenik1 = new Ucenik("Mario", "Marović", "70578846852", racun);
+            Ucenik ucenik1 = new Ucenik("Mario", "Marović", "70578846852", "3568");
             Ucenik ucenik2 = new Ucenik("Darija", "Selak", "12345846852");
             Ucenik ucenik3 = new Ucenik("Silvio", "Habat");
 
@@ -20,7 +22,6 @@ namespace _1_ucenik
             listaUcenika.Add(ucenik1);
             listaUcenika.Add(ucenik2);
             listaUcenika.Add(ucenik3);
-
 
             if (ucenik1.Oib == null)
             {
@@ -41,6 +42,40 @@ namespace _1_ucenik
                 listaUcenika.Add(ucenik3);
             }
 
+            if (ucenik1.Racun != null)
+            {
+                ucenik1.Racun = ucenik1.Racun;
+            }
+            else
+            {                
+                       Random rng = new Random();
+                       int randomNumber = rng.Next(2000, 6000);
+                       ucenik1.Racun = randomNumber.ToString(); 
+            }
+
+            if (ucenik2.Racun != null)
+            {
+                ucenik2.Racun = ucenik2.Racun;
+            }
+            else
+            {
+                Random rng = new Random();
+                int randomNumber = rng.Next(2000, 6000);
+                ucenik2.Racun = randomNumber.ToString();
+            }
+
+            if (ucenik3.Racun != null)
+            {
+                ucenik3.Racun = ucenik3.Racun;
+            }
+            else
+            {
+                Random rng = new Random();
+                int randomNumber = rng.Next(2000, 6000);
+                ucenik3.Racun = randomNumber.ToString();
+            }
+
+                                 
             Console.Write("Unesi broj telefona za " + ucenik1.Ime + " " + ucenik1.Prezime + " : ");
             ucenik1.Telefon = int.Parse(Console.ReadLine());
             listaUcenika.Add(ucenik1);
@@ -64,13 +99,13 @@ namespace _1_ucenik
 
             Console.WriteLine("\nUčenik: \n{0} {1}", ucenik1.Ime, ucenik1.Prezime);
             Console.WriteLine("OIB: \t{0}", ucenik1.Oib);
-            Console.WriteLine("Br. Racuna: {0}\tStanje: {1}", ucenik1.GetRacun(), ucenik1.StanjeRacuna());
+            Console.WriteLine("Br. Racuna: {0}\tStanje: {1}", ucenik1.Racun, ucenik1.StanjeRacuna());
             Console.WriteLine("\nUčenik: \n{0} {1}", ucenik2.Ime, ucenik2.Prezime);
             Console.WriteLine("OIB: \t{0}", ucenik2.Oib);
-            Console.WriteLine("Br. Racuna: {0}\tStanje: {1}", ucenik2.GetRacun(), ucenik2.StanjeRacuna());
+            Console.WriteLine("Br. Racuna: {0}\tStanje: {1}", ucenik2.Racun, ucenik2.StanjeRacuna());
             Console.WriteLine("\nUčenik: \n{0} {1}", ucenik3.Ime, ucenik3.Prezime);
             Console.WriteLine("OIB: \t{0}", ucenik3.Oib);
-            Console.WriteLine("Br. Racuna: {0}\tStanje: {1}", ucenik3.GetRacun(), ucenik3.StanjeRacuna());
+            Console.WriteLine("Br. Racuna: {0}\tStanje: {1}", ucenik3.Racun, ucenik3.StanjeRacuna());
 
 
             Console.ReadKey();

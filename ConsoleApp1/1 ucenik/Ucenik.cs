@@ -7,10 +7,10 @@ namespace _1_ucenik
         private string ime;
         private string prezime;
         private string oib;
-        private int racun;
+        
         private float telefon;
         double poStRacuna;
-        
+        private string racun;
 
         public Ucenik(string ime, string prezime)
         {
@@ -23,39 +23,18 @@ namespace _1_ucenik
             this.Oib = oib;
         }
 
-        public Ucenik(string ime, string prezime, string oib, int racun) : this(ime, prezime, oib)
+        public Ucenik(string ime, string prezime, string oib, string racun) : this(ime, prezime, oib)
         {
-            this.SetRacun(racun);
+            this.Racun = racun;
         }
 
         public string Ime { get => ime; set => ime = value; }
         public string Prezime { get => prezime; set => prezime = value; }
         public string Oib { get => oib; set => oib = value; }
-
-        public int GetRacun()
-        {
-            return racun;
-        }
-
-        public void SetRacun(int value)
-        {
-            if (racun != null)
-            {
-                racun = value;
-            }
-            else
-            {
-                Random rng = new Random();
-                int randomNumber = rng.Next(2000, 6000);
-                racun = randomNumber;
-            }
-
-        }
-        
+        public string Racun { get => racun; set => racun = value; }       
         public float Telefon { get => telefon; set => telefon = value; }
         public double PoStRacuna { get => poStRacuna; set => poStRacuna = value; }
-
-        //public double StanjeRacuna1 { get => StanjeRacuna; set => StanjeRacuna = value; }
+        
 
         public double StanjeRacuna()
         {
