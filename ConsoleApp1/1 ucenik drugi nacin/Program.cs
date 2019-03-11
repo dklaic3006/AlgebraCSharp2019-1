@@ -32,7 +32,7 @@ namespace _1_ucenik_drugi_nacin
         private static void IspisUcenika(Ucenik ucenik)
         {
             Console.WriteLine("\nUčenik: \n{0} {1}", ucenik.Ime, ucenik.Prezime);
-            Console.WriteLine("OIB: \t{0}", ucenik.Oib);
+            Console.WriteLine("OIB: \t*******{0}", ucenik.PartialOib);
             Console.WriteLine("Br. Racuna: {0}\tStanje: {1}", ucenik.Racun, ucenik.StanjeRacuna());
         }
 
@@ -67,14 +67,14 @@ namespace _1_ucenik_drugi_nacin
         public static void UnesiOib(Ucenik ucenik)
         {
 
-            while (ucenik.Oib <= 999999999 || ucenik.Oib >= 999999999999)
+            while (ucenik.oib <= 999999999 || ucenik.oib >= 999999999999)
             {
                 try
                 {
                     Console.Write("Unesi OIB za ucenika {0} {1}: ", ucenik.Ime, ucenik.Prezime);
                     ucenik.Oib = long.Parse(Console.ReadLine());
 
-                    while (ucenik.Oib <= 999999999 || ucenik.Oib >= 999999999999)
+                    while (ucenik.oib <= 999999999 || ucenik.oib >= 999999999999)
                     {
                         Console.Write("Uneseni OIB nije ispravan\nUnesi OIB za ucenika {0} {1}: ", ucenik.Ime, ucenik.Prezime);
                         ucenik.Oib = long.Parse(Console.ReadLine());
