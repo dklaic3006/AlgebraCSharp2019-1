@@ -31,7 +31,7 @@ namespace _1_ucenik_drugi_nacin
 
         private static void IspisUcenika(Ucenik ucenik)
         {
-            Console.WriteLine("\nUčenik: \n{0} {1}", ucenik.Ime, ucenik.Prezime);
+            Console.WriteLine("\nUčenik: \n{0} {1}\t\tbroj telefona: 0{2}", ucenik.Ime, ucenik.Prezime, ucenik.Telefon);
             Console.WriteLine("OIB: \t*******{0}", ucenik.PartialOib);
             Console.WriteLine("Br. Racuna: {0}\tStanje: {1}", ucenik.Racun, ucenik.StanjeRacuna());
         }
@@ -54,14 +54,57 @@ namespace _1_ucenik_drugi_nacin
 
         private static void UnesiPoStRacuna(Ucenik ucenik)
         {
-            Console.Write("Unesi početno stanje računa za " + ucenik.Ime + " " + ucenik.Prezime + " : ");
-            ucenik.PoStRacuna = double.Parse(Console.ReadLine());
+            try
+            {
+                Console.Write("Unesi početno stanje računa za " + ucenik.Ime + " " + ucenik.Prezime + " : ");
+                ucenik.PoStRacuna = double.Parse(Console.ReadLine());
+
+                if(ucenik.PoStRacuna < 0)
+                {
+                  throw new  Exception_negativan_broj();
+                }
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Greška - " + ex.Message);
+            }
+            catch (Exception_negativan_broj)
+            {
+                Console.WriteLine("početno stanje računa je u minusu!!");
+            }
+
         }
 
         private static void UnesiTelefon(Ucenik ucenik)
         {
-            Console.Write("Unesi broj telefona za " + ucenik.Ime + " " + ucenik.Prezime + " : ");
-            ucenik.Telefon = float.Parse(Console.ReadLine());
+            char upit = 'd';
+            try
+            {
+                while (upit == 'd' && ucenik.Telefon < 11000001 || ucenik.Telefon > 999999999)
+                {
+                    Console.Write("Unesi broj telefona za " + ucenik.Ime + " " + ucenik.Prezime + ":0");
+                    ucenik.Telefon = long.Parse(Console.ReadLine());
+                    
+                        if (ucenik.Telefon < 11000001 || ucenik.Telefon > 999999999)
+                        {
+                            Console.Write("broj nije ispravan. želite li unijeti ispravan broj telefona d / n");
+                            upit = Console.ReadKey().KeyChar;
+                            Console.WriteLine();
+                        }                    
+                    
+                }
+
+                if (ucenik.Telefon < 0)
+                {
+                    throw new Exception_negativan_broj();
+                }
+              
+            }
+            catch (FormatException fex)
+            {
+                Console.WriteLine("Greška" + fex.Message);
+            }
+           
         }
 
         public static void UnesiOib(Ucenik ucenik)

@@ -10,7 +10,7 @@ namespace _1_ucenik_drugi_nacin
         //private long partialOib;
         private string racun;
 
-        float telefon;
+        long telefon;
         //int stanjeRacuna;
         double poStRacuna;
 
@@ -35,7 +35,7 @@ namespace _1_ucenik_drugi_nacin
         public long Oib { set => oib = value; }
         public long PartialOib { get => long.Parse(oib.ToString().Substring(7, 4)); }
         public string Racun { get => racun; set => racun = value; }
-        public float Telefon { get => telefon; set => telefon = value; }
+        public long Telefon { get => telefon; set => telefon = value; }
         //public int StanjeRacuna { get => stanjeRacuna; set => stanjeRacuna = value; }
         public double PoStRacuna { get => poStRacuna; set => poStRacuna = value; }
         
