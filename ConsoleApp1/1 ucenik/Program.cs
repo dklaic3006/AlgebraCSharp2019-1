@@ -62,6 +62,7 @@ namespace _1_ucenik
                 Random rng = new Random();
                 int randomNumber = rng.Next(2000, 6000);
                 ucenik2.Racun = randomNumber.ToString();
+                System.Threading.Thread.Sleep(20);
             }
 
             if (ucenik3.Racun != null)

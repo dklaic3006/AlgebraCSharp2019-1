@@ -12,9 +12,9 @@ namespace _1_ucenik_drugi_nacin
         {
             List<Ucenik> listaUcenika = new List<Ucenik>
             {
-                new Ucenik ("Ozren", "Orkic"),               
-                new Ucenik ("Marija", "Maric", "62359956123"),
-                new Ucenik ("Ivan", "Ivic", "70578846852", "3456"),
+                new Ucenik ("Ozren", "Orkic"),
+                new Ucenik ("Marija", "Maric", 62359956123),
+                new Ucenik ("Ivan", "Ivic", 70578846852, "3456"),
             };
 
 
@@ -24,7 +24,7 @@ namespace _1_ucenik_drugi_nacin
             listaUcenika.ForEach(Ucenik => ProvjeriRacun(Ucenik));
             listaUcenika.ForEach(Ucenik => IspisUcenika(Ucenik));
 
-           
+
 
             Console.ReadKey();
         }
@@ -47,6 +47,8 @@ namespace _1_ucenik_drugi_nacin
                 Random rng = new Random();
                 int randomNumber = rng.Next(2000, 6000);
                 ucenik.Racun = randomNumber.ToString();
+                System.Threading.Thread.Sleep(20);
+
             }
         }
 
@@ -63,14 +65,36 @@ namespace _1_ucenik_drugi_nacin
         }
 
         public static void UnesiOib(Ucenik ucenik)
-        {                     
-           if (ucenik.Oib == null)
+        {
+
+            while (ucenik.Oib <= 999999999 || ucenik.Oib >= 999999999999)
             {
-                Console.Write("Unesi OIB za ucenika {0} {1}: ", ucenik.Ime, ucenik.Prezime);
-                ucenik.Oib = Console.ReadLine();
+                try
+                {
+                    Console.Write("Unesi OIB za ucenika {0} {1}: ", ucenik.Ime, ucenik.Prezime);
+                    ucenik.Oib = long.Parse(Console.ReadLine());
+
+                    while (ucenik.Oib <= 999999999 || ucenik.Oib >= 999999999999)
+                    {
+                        Console.Write("Uneseni OIB nije ispravan\nUnesi OIB za ucenika {0} {1}: ", ucenik.Ime, ucenik.Prezime);
+                        ucenik.Oib = long.Parse(Console.ReadLine());
+
+                    }
+
+                }
+
+                catch (FormatException ex)
+                {
+                    Console.WriteLine(" Greška - " + ex.Message);
+                }
+
+                catch (Exception fex)
+                {
+                    Console.WriteLine(" Greška - " + fex.Message);
+                }
             }
         }
-               
+
     }
 }
 
