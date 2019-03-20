@@ -1,0 +1,125 @@
+--zadatak 3.2
+
+USE [Fakultet]
+GO
+
+SELECT 
+      [imeNastavnik]
+      ,[prezNastavnik]
+     
+  FROM [dbo].[nastavnik]
+GO
+
+--zadatak 3.3
+
+USE [Fakultet]
+GO
+
+SELECT [mbrStud],
+     [imeStud] + ' ' +[prezStud] AS 'Ime i Prezime'
+     
+  FROM [dbo].[stud]
+GO
+
+--zadatak 3.4
+
+GO
+
+SELECT DISTINCT [imeStud]
+    
+  FROM [dbo].[stud]
+
+  ORDER BY imeStud DESC
+GO
+
+--zadatak 3.5
+
+USE [Fakultet]
+GO
+
+SELECT [mbrStud] 
+
+  FROM [dbo].[ispit]
+
+  WHERE sifPred = 146
+GO
+
+--zadatak 3.6
+
+USE [Fakultet]
+GO
+
+SELECT 
+      [imeNastavnik]
+      ,[prezNastavnik],
+      
+      ([koef] + 0.4)*800 AS 'placa'
+  FROM [dbo].[nastavnik]
+GO
+
+--zadatak 3,7
+
+USE [Fakultet]
+GO
+
+SELECT 
+      [imeNastavnik]
+      ,[prezNastavnik],
+      
+      ([koef] + 0.4)*800 AS 'placa'
+  FROM [dbo].[nastavnik]
+  WHERE (([koef] + 0.4)*800 > 3500) OR (([koef] + 0.4)*800 < 8000)
+GO
+
+
+--ZADATAK 3.8
+
+USE [Fakultet]
+GO
+
+SELECT *
+      
+      
+  FROM [dbo].[stud]
+
+  WHERE  imeStud LIKE '[aeiou] % [aeiou]'
+GO
+
+
+--ZADATAK 3.9
+
+USE [Fakultet]
+GO
+
+SELECT *
+      
+      
+  FROM [dbo].[stud]
+
+  WHERE  imeStud LIKE '[^aeiou] % [^aeiou]'
+GO
+
+
+--ZADATAK 3.10
+
+USE [Fakultet]
+GO
+
+SELECT * FROM [dbo].[stud]
+
+WHERE imeStud LIKE '[aeiou] %' OR imeStud LIKE '% [aeiou]'
+
+GO
+
+--ZADATAK 3.11
+
+USE [Fakultet]
+GO
+
+SELECT * FROM [dbo].[stud]
+
+WHERE imeStud LIKE '% nk %' OR prezStud LIKE '% nk %'
+
+GO
+
+
