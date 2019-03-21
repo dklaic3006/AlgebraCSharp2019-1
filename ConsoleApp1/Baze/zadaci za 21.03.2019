@@ -82,7 +82,7 @@ SELECT *
       
   FROM [dbo].[stud]
 
-  WHERE  imeStud LIKE '[aeiou] % [aeiou]'
+  WHERE  LTRIM(RTRIM(imeStud)) LIKE '[aeiou] % [aeiou]'
 GO
 
 
@@ -96,7 +96,7 @@ SELECT *
       
   FROM [dbo].[stud]
 
-  WHERE  imeStud LIKE '[^aeiou] % [^aeiou]'
+  WHERE  LTRIM(RTRIM(imeStud)) LIKE '[^aeiou] % [^aeiou]'
 GO
 
 
@@ -107,7 +107,7 @@ GO
 
 SELECT * FROM [dbo].[stud]
 
-WHERE imeStud LIKE '[aeiou] %' OR imeStud LIKE '% [aeiou]'
+WHERE LTRIM(RTRIM(imeStud)) LIKE '[aeiou] %' OR imeStud LIKE '% [aeiou]'
 
 GO
 
@@ -118,7 +118,7 @@ GO
 
 SELECT * FROM [dbo].[stud]
 
-WHERE imeStud LIKE '% nk %' OR prezStud LIKE '% nk %'
+WHERE LTRIM(RTRIM(imeStud)) LIKE '% nk %' OR prezStud LIKE '% nk %'
 
 GO
 
