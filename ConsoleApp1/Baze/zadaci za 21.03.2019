@@ -116,10 +116,105 @@ GO
 USE [Fakultet]
 GO
 
-SELECT * FROM [dbo].[stud]
-
-WHERE imeStud LIKE '% nk %' OR prezStud LIKE '% nk %'
+SELECT *
+  FROM [dbo].[stud]
+  
+  WHERE LTRIM(RTRIM (imeStud)) LIKE '%nk%' or prezStud LIKE '%nk%'
 
 GO
+
+-- ZADATAK 3.15
+
+USE [Fakultet]
+GO
+
+SELECT 
+ stud.imeStud AS ime_studenta
+,pred.nazPred AS naziv_predmeta
+,ispit.ocjena AS ocijena
+
+  FROM [dbo].[stud]
+  
+  JOIN ispit ON stud.mbrStud = ispit.mbrStud
+  JOIN pred ON ispit.sifPred = pred.sifPred
+
+GO
+
+
+-- zadatak 3.16
+
+USE [Fakultet]
+GO
+
+SELECT 
+
+ stud.imeStud + ' ' + stud.prezStud AS ime_i_prezime
+ ,mjesto.nazMjesto AS mjesto_rodjenja
+ ,zupanija.nazZupanija AS zupanija_rodjenja
+ ,m.nazMjesto AS mjesto_boravista
+ ,z.nazZupanija AS zupanija_boravista
+
+  FROM [dbo].[stud]
+
+ 
+  LEFT JOIN dbo.mjesto ON stud.pbrRod = mjesto.pbr
+  LEFT JOIN dbo.zupanija ON mjesto.sifZupanija = zupanija.sifZupanija
+
+  LEFT JOIN dbo.mjesto m ON stud.pbrStan = m.pbr
+   LEFT JOIN dbo.zupanija z ON m.sifZupanija = z.sifZupanija
+GO
+
+
+-- zadatak 3.17
+
+USE [Fakultet]
+GO
+
+SELECT 
+
+ pred.nazPred AS predmet
+,orgjed.nazOrgjed AS organizacijaska_jedinica
+,pred.upisanoStud AS upisano_studenata
+
+  FROM [dbo].[pred] 
+
+  JOIN dbo.orgjed ON pred.sifOrgjed = orgjed.sifOrgjed
+  WHERE upisanoStud >20
+  ORDER BY upisano_studenata DESC
+GO
+
+
+-- zadatak 3.18
+
+USE [Fakultet]
+GO
+
+SELECT 
+
+DISTINCT mjesto.nazMjesto
+  FROM [dbo].[stud]
+
+  JOIN dbo.mjesto ON stud.pbrStan = mjesto.pbr
+  ORDER BY nazMjesto DESC
+  
+GO
+
+-- zadatak 3.19
+
+USE [Fakultet]
+GO
+
+SELECT 
+ DISTINCT mjesto.nazMjesto
+
+
+  FROM [dbo].[stud]
+
+  JOIN dbo.mjesto ON stud.pbrRod = mjesto.pbr
+  join dbo.mjesto m ON stud.pbrStan = m.pbr
+  WHERE pbrStan = pbrRod
+
+GO
+
 
 
