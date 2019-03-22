@@ -217,4 +217,19 @@ SELECT
 GO
 
 
+-- zadatak 3.20
+
+USE [Fakultet]
+GO
+
+SELECT 
+ DISTINCT rezervacija.oznDvorana AS dvorana
+ , pred.nazPred AS kolegij
+  FROM [dbo].[pred]
+
+  JOIN dbo.rezervacija ON pred.sifPred = rezervacija.sifPred
+
+  WHERE brojSatiTjedno > 2
+
+GO
 
